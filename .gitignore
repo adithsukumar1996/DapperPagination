@@ -1,0 +1,100 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@adithsukumar1996 
+PacktPublishing
+/
+ASP.NET-Core-2-and-Angular-5
+28
+7573
+Code
+Issues
+3
+Pull requests
+1
+Actions
+Wiki
+Security
+Insights
+ASP.NET-Core-2-and-Angular-5/.gitignore
+
+Akhil Nair Code files updated by PACKT
+Latest commit 3ecdb42 on Nov 23, 2017
+ History
+ 0 contributors
+57 lines (52 sloc)  681 Bytes
+  
+# use glob syntax
+syntax: glob
+
+wwwroot/app/**
+wwwroot/bin/**
+wwwroot/js/**
+wwwroot/scripts/**
+wwwroot/styles/**
+wwwroot/dist/main-client.*
+ClientApp/dist/main-server.*
+
+node_modules/**
+[Ss]cripts/[Aa]pp/*.js
+[Ss]cripts/[Aa]pp_old/*.js
+
+[Mm]igrations/**
+
+.tscache/**
+.vs/
+
+*.mwb.bak	# MySQL Workbench .BAK file
+*.dbmdl		# VS2010 Database Projects cache file
+*.obj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.DotSettings
+[Bb]in
+[Dd]ebug*/**
+obj/
+[Rr]elease*/**
+_ReSharper*/**
+NDependOut/**
+packages/**
+[Tt]humbs.db
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*.resharper
+*.ncrunch*
+*.ndproj
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
