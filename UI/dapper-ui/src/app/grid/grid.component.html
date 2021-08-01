@@ -1,0 +1,26 @@
+<mat-progress-bar class="center" mode="query" *ngIf="loading"></mat-progress-bar>
+<mat-form-field style="width: 100%;">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="search" #input>
+</mat-form-field>
+<div class="table-responsive">
+    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="applySort($event)" class="mat-elevation-z8">
+        <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>{{column.DisplayName}}</th>
+            <td mat-cell *matCellDef="let element">
+                {{ element[column.columnName] }}
+            </td>
+        </ng-container>
+        <ng-container *ngFor="let button of buttons" [matColumnDef]="button.buttonName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>{{button.displayName}}</th>
+            <td (click)="buttonClick(button.buttonName, element)" class="pl-2" mat-cell *matCellDef="let element">
+                <button mat-raised-button>{{button.displayName}}</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator [length]="noOfResults" [pageSize]="query.pageSize" (page)="applyPagination($event)"
+        [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
